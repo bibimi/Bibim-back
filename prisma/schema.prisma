@@ -9,3 +9,29 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model User {
+  id String @id @default(uuid())
+  email String @unique
+  password String
+  name String
+  nickname String
+  isArtist Boolean @default(false)
+  introduce String?
+}
+
+model TextFeed{
+  id String @id @default(uuid())
+}
+
+model ImageFeed{
+  id String @id @default(uuid())
+}
+
+model ConcertFeed{
+  id String @id @default(uuid())
+}
+
+model SoundFeed{
+  id String @id @default(uuid())
+}
