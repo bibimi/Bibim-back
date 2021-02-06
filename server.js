@@ -19,3 +19,5 @@ app.use(function (req, res, next) {
 const userRouter = require("./router/userRouter");
 
 app.use("/api/user", userRouter);
+
+server.listen(process.env.PORT || 8000, () => {});
