@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@prisma/client@^2.16.0":
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.16.0.tgz#811dcb8310544876b88a0bbd230a2f65c58a9c01"
+  integrity sha512-q02/IKwUIN+9Kl+Oayfb6x38NQ4ROvLoPSE+V0DRlJehTAJoxgRUWuPwaiOkksVnnmK4XHvKS/TR5EmQHUVxYw==
+  dependencies:
+    "@prisma/engines-version" "2.16.0-44.854c8ba7f0dce66f115af36af24e66989a8c02a1"
+
+"@prisma/engines-version@2.16.0-44.854c8ba7f0dce66f115af36af24e66989a8c02a1":
+  version "2.16.0-44.854c8ba7f0dce66f115af36af24e66989a8c02a1"
+  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-2.16.0-44.854c8ba7f0dce66f115af36af24e66989a8c02a1.tgz#6df1a9a9f4c711e18861be2de4c4f0e363d0aae9"
+  integrity sha512-/gcqWJDXoo0vsYi7fhdhdyjfMXxJPjKl8K7oc/k2BH7IQuXUB1A+ZnFgqRcT/rKuyU4xH8+N+l+C4boWlqYvgQ==
+
 "@prisma/engines@2.16.0-44.854c8ba7f0dce66f115af36af24e66989a8c02a1":
   version "2.16.0-44.854c8ba7f0dce66f115af36af24e66989a8c02a1"
   resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-2.16.0-44.854c8ba7f0dce66f115af36af24e66989a8c02a1.tgz#c7a53f31eafca0e4c010663740ee22ea678f757e"
@@ -79,6 +91,11 @@ destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
+
+dotenv@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
 
 ee-first@1.1.1:
   version "1.1.1"
