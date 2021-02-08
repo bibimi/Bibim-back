@@ -24,7 +24,7 @@ const soundUpload = multer({
 });
 
 soundRouter.post("/upload", soundUpload.single("sound"), async (req, res) => {
-    let sound = req.sound;
+    let sound = req.file;
     res.json(sound.location);
 });
 
