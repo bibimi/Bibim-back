@@ -17,8 +17,9 @@ app.use(function (req, res, next) {
 });
 
 const userRouter = require("./router/userRouter");
-
+const soundRtouer = require("./router/soundRouter");
 app.use("/api/user", userRouter);
+app.use("/api/sound", soundRtouer);
 
 server.listen(process.env.PORT || 8000, () => {
     console.log(`Server runs at ${process.env.PORT || 8000}`);

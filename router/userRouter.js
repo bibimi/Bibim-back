@@ -1,7 +1,6 @@
 const AWS = require("aws-sdk");
 AWS.config.loadFromPath(__dirname + "/../config/awsconfig.json");
 const s3 = new AWS.S3();
-const path = require("path");
 const multer = require("multer");
 const multerS3 = require("multer-s3");
 
@@ -10,22 +9,28 @@ const prisma = new PrismaClient();
 const express = require("express");
 const userRouter = express.Router();
 
-const upload = multer({
+const profileUpload = multer({
     storage: multerS3({
         s3: s3,
         bucket: "bibim",
-        key: function (req, file, cb) {
-            let extension = path.extname(file.originalname);
-            cb(null, Date.now().toString() + extension);
+
+        key: function (req, file, callback) {
+            const newFileName = `${Date.now()}_${file.originalname}`;
+            const fullPath = `Profile/${newFileName}`;
+            callback(null, fullPath);
         },
         acl: "public-read-write",
     }),
 });
 
-userRouter.post("/upload", upload.single("sample"), async (req, res) => {
-    let sample = req.file;
-    res.json(sample);
-});
+userRouter.post(
+    "/upload",
+    profileUpload.single("profile"),
+    async (req, res) => {
+        let profile = req.file;
+        res.json(profile.location);
+    }
+);
 
 userRouter.get("/:email", async (req, res) => {
     const email = req.params.email;
