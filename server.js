@@ -20,4 +20,6 @@ const userRouter = require("./router/userRouter");
 
 app.use("/api/user", userRouter);
 
-server.listen(process.env.PORT || 8000, () => {});
+server.listen(process.env.PORT || 8000, () => {
+    console.log(`Server runs at ${process.env.PORT || 8000}`);
+});
